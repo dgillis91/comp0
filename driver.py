@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 from __future__ import (absolute_import, division,
                         print_function, unicode_literals)
@@ -15,7 +15,7 @@ if args.path is None:
     driver = KeyboardReaderDriver()
     tree = driver.parse()
 else:
-    driver = FileReaderDriver('testfile')
+    driver = FileReaderDriver(args.path)
     tree = driver.parse_file()
 
 print('***printing preorder***')
